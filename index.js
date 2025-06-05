@@ -31,12 +31,12 @@ function typeWriter(texts, element, textIndex = 0, i = 0) {
         const text = texts[textIndex];
         if (i < text.length) {
         element.innerHTML += text.charAt(i);
-        setTimeout(() => typeWriter(texts, element, textIndex, i + 1), 40); // Tốc độ gõ
+        setTimeout(() => typeWriter(texts, element, textIndex, i + 1), 30); // Tốc độ gõ
         } else {
         setTimeout(() => {
             element.innerHTML += '<br>'; // Xóa nội dung cũ
             typeWriter(texts, element, textIndex + 1); // Chuyển sang đoạn văn tiếp theo
-        }, 2000); // Đợi 2 giây rồi chuyển quan đoạn khác
+        }, 1000); // Đợi 2 giây rồi chuyển quan đoạn khác
         }
     } else {
         // Thêm gif
